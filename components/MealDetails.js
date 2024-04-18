@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 
-const MealDetails = ({duration, complexity, affordability}) => {
+const MealDetails = ({ duration, complexity, affordability }) => {
   return (
     <View style={styles.details}>
       <Text style={styles.detailItem}>{duration}m</Text>
@@ -20,9 +20,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   detailItem: {
-    detailItem: {
-      marginHorizontal: 4,
-      fontSize: 12,
-    },
+    marginHorizontal: 4,
+    fontSize: 12,
   },
 });
