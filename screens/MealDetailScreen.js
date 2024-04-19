@@ -8,18 +8,18 @@ const MealDetailScreen = ({ navigation, route }) => {
 
   return (
     <View>
-      <Image source={{ uri: selectedMeal.imageUrl }} />
-      <Text>{selectedMeal.title}</Text>
+      <Image source={{ uri: selectedMeal.imageUrl }} style={styles.imag}/>
+      <Text style={styles.title}>{selectedMeal.title}</Text>
       <MealDetails
         duration={selectedMeal.duration}
         complexity={selectedMeal.complexity}
         affordability={selectedMeal.affordability}
       />
-      <Text>Ingredients</Text>
+      <Text style={styles.subtitle}>Ingredients</Text>
       {selectedMeal.ingredients.map((ingredient) => (
         <Text key={ingredient}>{ingredient}</Text>
       ))}
-      <Text>Steps</Text>
+      <Text style={styles.subtitle}>Steps</Text>
       {selectedMeal.steps.map((step) => (
         <Text key={step}>{step}</Text>
       ))}
@@ -29,4 +29,24 @@ const MealDetailScreen = ({ navigation, route }) => {
 
 export default MealDetailScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    imag: {
+        width: '100%',
+        height: 350,
+    },
+    title: {
+        fontWeight: 'bold',
+        fontSize: 24,
+        margin: 8,
+        textAlign: 'center'
+    },
+    subtitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginVertical: 4,
+        marginHorizontal: 24,
+        padding: 6,
+        textAlign: 'center',
+        borderBottomWidth: 2,
+    }
+});
