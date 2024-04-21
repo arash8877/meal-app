@@ -8,12 +8,12 @@ import { Ionicons } from "@expo/vector-icons";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
-import { FavoritesContextProvider } from "./store/context/favorites-context";
+import {FavoritesContextProvider} from "./store/context/favorites-context";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-function drawerNavigator() {
+function DrawerNavigator() {
   return (
     <Drawer.Navigator
       screenOptions={{
@@ -64,7 +64,7 @@ export default function App() {
           >
             <Stack.Screen
               name="Drawer"
-              component={drawerNavigator}
+              component={DrawerNavigator}
               options={{
                 headerShown: false,
               }}
